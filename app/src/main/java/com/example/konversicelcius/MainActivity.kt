@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             else -> celcius + 273
         }
         //konversi angka tidak ada koma
-        val suhuKonversi = ("%.2f".format(hasilnya))
+        val suhuKonversi = ("%.0f".format(hasilnya))
         // menampilkan di hp
         val hasil: TextView = findViewById(R.id.hasil_konversi)
         hasil.text = suhuKonversi.toString()
