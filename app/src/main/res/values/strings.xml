@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Konversi Celcius</string>
+    <string name="input_celcius">Masukan Suhu Celcius</string>
+    <string name="celcius_question">Silahkan ubah sesuai yang diinginkan</string>
+    <string name="c_tofahrenheit">Celcius menjadi Fahrenheit</string>
+    <string name="c_toreamur">Celcius menjadi Reamur</string>
+    <string name="c_tokelvin">Celcius menjadi Kelvin</string>
+    <string name="all">Celcius to all</string>
+    <string name="konversi">Konversi</string>
+    <string name="hasil_konversi">Hasil konversinya adalah: </string>
+</resources>

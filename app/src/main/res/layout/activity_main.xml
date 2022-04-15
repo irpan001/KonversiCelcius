@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_input_celcius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_school"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/input_celcius"
+        app:layout_constraintBottom_toBottomOf="@id/input_celcius" />
+
+    <EditText
+        android:id="@+id/input_celcius"
+        android:layout_width="354dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:hint="Masukan Suhu Celcius"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@id/icon_input_celcius"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_service_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/celcius_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/celcius_question"
+        app:srcCompat="@drawable/ic_inbox" />
+
+    <TextView
+        android:id="@+id/celcius_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/celcius_question"
+        app:layout_constraintStart_toStartOf="@id/input_celcius"
+        app:layout_constraintTop_toBottomOf="@id/input_celcius" />
+
+
+
+    <RadioGroup
+        android:id="@+id/pilihan_konversi"
+        android:checkedButton="@id/c_tofahrenheit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celcius_question"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/c_tofahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celcius menjadi Fahrenheit" />
+
+        <RadioButton
+            android:id="@+id/c_toreamur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celcius menjadi Reamur" />
+
+        <RadioButton
+            android:id="@+id/c_tokelvin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celcius menjadi Kelvin" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/konversi_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="konversi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilihan_konversi" />
+
+    <TextView
+        android:id="@+id/hasil_konversi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/konversi_button"
+        android:text="@string/hasil_konversi"
+        tools:text="hasilnya adalah"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
